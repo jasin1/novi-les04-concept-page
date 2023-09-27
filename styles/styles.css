@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -14,17 +16,72 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+:root {
+    --color-gradient: linear-gradient(125deg, rgba(75, 73, 231, 1) 0%, rgba(88, 33, 205, 1) 100%);
+    --color-white: rgb(255, 255, 255);
+    --color-red: #EE4284;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 64px;
+}
+
+
+body {
 
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button{
+    background: var(--color-red);
+    color: var(--color-white);
+    border-radius: 100px;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1{
+    max-width: 800px;
+    font-size: 3rem;
+}
+
+header h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -35,6 +92,86 @@ body{
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    color: var(--color-white);
+    background: var(--color-gradient);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*header > *{*/
+/*    border-top: 1px solid white;*/
+/*}*/
+
+
+nav {
+    /*border: 1px solid white;*/
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 0;
+    flex-grow: 1;
+}
+
+ul {
+    display: flex;
+    gap: 3rem;
+}
+
+a {
+    color: var(--color-white);
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+a:hover {
+    color: red;
+}
+
+.header-intro {
+    flex-grow: 4;
+    /*padding-top: 7.5rem;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    /*border: 2px solid mediumaquamarine;*/
+}
+
+.heading-container{
+    /*border: 1px solid white;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+header h2{
+    margin-bottom: 2rem;
+}
+
+.header-bottom {
+    flex-grow: 1;
+    /*margin-top: auto;*/
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /*border: 2px solid mediumaquamarine;*/
+}
+
+.decoration-img {
+    width: 80px;
+}
+
+.line-vertical {
+    margin-top: 1rem;
+    width: 1px;
+    height: 4.5rem;
+    background: rgba(255, 255, 255, 0.4);
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
