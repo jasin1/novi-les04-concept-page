@@ -39,7 +39,7 @@
                 create new digital experiences.</p>
         </div>
         <div class="intro-bottom">
-            <p>Have a question? Click here to contact us!</p>
+            <p>Have a question? <span><a href="#">Click here</a></span> to contact us!</p>
         </div>
     </section>
     <section class="work">
@@ -146,18 +146,21 @@
         </div>
         <form action="/">
 
-            <label for="user-name">
+            <label for="user-name"><span>Name</span>
                 <input type="text" name="username" placeholder="Name" id="user-name">
             </label>
             <label for="user-email">
-                <input type="text" name="useremail" placeholder="Email" id="user-email">
+                <span>Email</span>
+                <input type="email" name="useremail" placeholder="Email" id="user-email">
             </label>
-            <label for="user-message">
-                input:<textarea name="usermessage" placeholder="Message" id="user-message" cols="30"
-                                rows="10"></textarea>
+            <label for="user-message"><span>Message</span>
+                <textarea name="usermessage" placeholder="Message" id="user-message" cols="30"
+                          rows="10"></textarea>
             </label>
 
-            <button type="submit">Send</button>
+            <div class="button-wrapper">
+                <button type="submit">Send</button>
+            </div>
         </form>
     </section>
 </main>
