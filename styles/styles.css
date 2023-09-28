@@ -60,6 +60,10 @@ section{
     background: var(--color-white);
 }
 
+p{
+    font-size: 1.125rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -402,7 +406,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 70%;
+    width: 64%;
 }
 label{
     display: flex;
@@ -434,7 +438,7 @@ input::placeholder, textarea::placeholder{
 }
 
 button[type="submit"]{
-    padding: 1rem 4.5rem;
+    padding: 1.4rem 4.5rem;
 }
 
 
