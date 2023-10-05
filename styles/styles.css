@@ -87,7 +87,7 @@ button{
     border: none;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
-    box-shadow: 0px 4px 18px 0px #421CA7;
+    box-shadow: 0 4px 18px 0 #421CA7;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -144,6 +144,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 0 40px;
 }
 
 /*header > *{*/
@@ -181,7 +182,7 @@ a:hover {
     /*font-weight: 600;*/
     color: var(--color-black);
     background: var(--color-yellow);
-    box-shadow: 0px 4px 18px 0px #421CA7;
+    box-shadow: 0 4px 18px 0 #421CA7;
 
 }
 
@@ -280,6 +281,7 @@ span> a:hover {
 
 .work :nth-child(even){
     flex-direction: row-reverse;
+    gap: 8rem;
 }
 
 .work :last-child{
@@ -289,9 +291,19 @@ span> a:hover {
 
 .work article{
     display: flex;
-    align-items: center;
-    gap: 8rem;
+    /*align-items: center;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+    gap: 4rem;
     margin-bottom: 6rem;
+    /*border: 1px solid saddlebrown;*/
+}
+
+.small-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid maroon;*/
 }
 
 .project-description{
@@ -300,6 +312,9 @@ span> a:hover {
     /*gap: 2.5rem;*/
     justify-content: flex-start;
     align-items: flex-start;
+    /*max-width: 80%;*/
+    /*border: 1px solid salmon;*/
+    /*margin-right: 8rem;*/
 
 }
 
@@ -312,19 +327,22 @@ span> a:hover {
 }
 
 .project-description p{
-
     margin-bottom: 3rem;
 }
 
 .image-wrapper{
-    flex-grow: 3;
-    flex-basis: 700px;
-    /*border: 1px solid darkblue;*/
+    flex: 2;
+    /*flex-grow: 3;*/
+    width: 100%;
+    /*border: 2px solid darkblue;*/
 }
 
 .image-wrapper img{
     width: inherit;
-    box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 18px 24px 0 rgba(0, 0, 0, 0.15);
 }
 
 
@@ -349,9 +367,8 @@ article button:hover{
 
 main > :nth-child(3){
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-row-gap: 3.5rem;
-    grid-column-gap: 3.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 3.5rem;
 }
 
 .skills{
@@ -360,7 +377,7 @@ main > :nth-child(3){
     height: 100%;
     padding: 2.5rem;
     border: 1px solid var(--color-purple);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.12);
 }
 
 .skills h3{
@@ -375,6 +392,7 @@ main > :nth-child(3){
 
 .skills p{
     color: var(--color-dark-grey);
+    margin-bottom: 1.5rem;
 }
 /* --------------- 4.5 form ------------------- */
 main> :last-child{
@@ -457,3 +475,115 @@ footer{
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 376px){
+    h1{
+        font-size: 1.2rem;
+    }
+
+    a{
+        font-size: .8rem;
+    }
+
+    body{
+        font-size: 10px;
+    }
+    ul{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    /*----------- global --------------*/
+
+    section{
+        padding: 5rem 2.5rem;
+    }
+
+    .container{
+        height: 100%;
+    }
+
+    /*----------- Header --------------*/
+    body{
+        font-size: 14px;
+    }
+
+    header {
+        height: 100vh;
+        padding: 0 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        max-width: 100%;
+    }
+    h2{
+        font-size: .8rem;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+    }
+
+    a{
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    button{
+        font-size: 1rem;
+    }
+
+
+    /*----------- intro --------------*/
+
+    .intro-top p{
+        font-size: 1.8rem;
+    }
+
+    /*----------- Work --------------*/
+
+
+    .work article{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        margin-bottom: 7rem;
+        align-items: flex-start;
+    }
+
+    .work :nth-child(even){
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .image-wrapper{
+        width: 100%;
+        flex-basis: 250px;
+        /*flex-grow: 1;*/
+    }
+
+
+
+    .project-description img{
+        margin-bottom: 2rem;
+    }
+
+    /*----------- skills --------------*/
+    /*----------- form --------------*/
+
+    main> :last-child h2{
+        font-size: 2.5rem;
+    }
+
+    form{
+        width: 100%;
+    }
+    /*----------- footer --------------*/
+}
+
