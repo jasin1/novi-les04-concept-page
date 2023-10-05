@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
     <title>Rekupe Concept page</title>
 </head>
 <body>
-<header>
+<header class="container">
     <nav>
         <ul>
             <li><a href="#">Case Studies</a></li>
@@ -15,13 +18,21 @@
         </ul>
     </nav>
     <div class="header-intro">
-        <h1>Your website is an investment in the success of your business.</h1>
+        <div class="heading-container">
+            <h1>Your website is an investment in the success of your business.</h1>
+        </div>
         <h2>We are here to help you succeed.</h2>
-        <button>Let's work together</button>
+        <div class="button-wrapper">
+            <button>Let's work together</button>
+        </div>
     </div>
-    <div class="header-bottom"></div>
+    <div class="header-bottom">
+        <div class="decoration-img"><img src="assets/squiggle_line-white.svg" alt=""></div>
+        <div class="line-vertical"></div>
+
+    </div>
 </header>
-<main>
+<main class="container">
     <section>
         <div class="intro-top">
             <p>Rekupe is a digital agency in Los Angeles. </p>
@@ -31,19 +42,21 @@
                 create new digital experiences.</p>
         </div>
         <div class="intro-bottom">
-            <p>Have a question? Click here to contact us!</p>
+            <p>Have a question? <span><a href="#">Click here</a></span> to contact us!</p>
         </div>
     </section>
     <section class="work">
 
         <article class="project">
-            <div class="project-description">
-                <h3>Rolling Stone</h3>
-                <img src="assets/squiggle_line.svg"
-                     alt="">
-                <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
-                    icon.</p>
-                <button>View Project</button>
+            <div class="small-container">
+                <div class="project-description">
+                    <h3>Rolling Stone</h3>
+                    <img src="assets/squiggle_line.svg"
+                         alt="">
+                    <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
+                        icon.</p>
+                    <button>View Project</button>
+                </div>
             </div>
             <div class="image-wrapper"><img src="assets/work-image-01.jpeg"
                                             alt="a table with various objects on it, including a laptop and a rolling stone magazine ">
@@ -51,26 +64,31 @@
         </article>
 
         <article class="project">
-            <div class="project-description">
-                <h3>Variety</h3>
-                <img src="assets/squiggle_line.svg" alt="">
-                <p>
-                    Variety is an industry leader for breaking entertainment news, reviews and box office results with
-                    archive of content dating back to 1905.
-                </p>
-                <button>View Project</button>
+            <div class="small-container">
+                <div class="project-description">
+                    <h3>Variety</h3>
+                    <img src="assets/squiggle_line.svg" alt="">
+                    <p>
+                        Variety is an industry leader for breaking entertainment news, reviews and box office results
+                        with
+                        archive of content dating back to 1905.
+                    </p>
+                    <button>View Project</button>
+                </div>
             </div>
             <div class="image-wrapper"><img src="assets/work-image-02.jpeg" alt=""></div>
         </article>
 
         <article class="project">
-            <div class="project-description">
-                <h3>Worth</h3>
-                <img src="assets/squiggle_line.svg" alt="">
-                <p>
-                    A global media platform connecting a community that embraces worth beyond wealth.
-                </p>
-                <button>View Project</button>
+            <div class="small-container">
+                <div class="project-description">
+                    <h3>Worth</h3>
+                    <img src="assets/squiggle_line.svg" alt="">
+                    <p>
+                        A global media platform connecting a community that embraces worth beyond wealth.
+                    </p>
+                    <button>View Project</button>
+                </div>
             </div>
             <div class="image-wrapper"><img src="assets/work-image-03.jpeg" alt=""></div>
         </article>
@@ -138,18 +156,21 @@
         </div>
         <form action="/">
 
-            <label for="user-name">
+            <label for="user-name"><span>Name</span>
                 <input type="text" name="username" placeholder="Name" id="user-name">
             </label>
             <label for="user-email">
-                <input type="text" name="useremail" placeholder="Email" id="user-email">
+                <span>Email</span>
+                <input type="email" name="useremail" placeholder="Email" id="user-email">
             </label>
-            <label for="user-message">
-                input:<textarea name="usermessage" placeholder="Message" id="user-message" cols="30"
-                                rows="10"></textarea>
+            <label for="user-message"><span>Message</span>
+                <textarea name="usermessage" placeholder="Message" id="user-message" cols="30"
+                          rows="10"></textarea>
             </label>
 
-            <button type="submit">Send</button>
+            <div class="button-wrapper">
+                <button type="submit">Send</button>
+            </div>
         </form>
     </section>
 </main>
